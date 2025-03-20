@@ -20,7 +20,7 @@ import Ipl from "./pages/IplAuction";
 function App() {
   return (
     <BrowserRouter>
-      {/* ✅ Floating drones will always be in the background */}
+      {/* Render the Drone animation globally */}
       <Drone />
 
       <Routes>

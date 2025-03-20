@@ -7,12 +7,15 @@ const Drone = () => {
   useEffect(() => {
     const generateDrones = () => {
       let elements = [];
-      for (let i = 0; i < 3; i++) { // ✅ Now there are 3 drones
+      const numDrones = 3; // 3 drones moving across the whole screen
+
+      for (let i = 0; i < numDrones; i++) {
         elements.push({
           id: i,
-          left: Math.random() * 80 + "vw", // Random horizontal position
-          top: Math.random() * 60 + 20 + "vh", // Random vertical position
-          animationDuration: Math.random() * 6 + 4 + "s", // Random animation speed
+          left: Math.random() * 80 + "vw", // Start anywhere horizontally
+          top: Math.random() * 80 + "vh", // Start anywhere vertically
+          animation: `flyDrone${i + 1} ${Math.random() * 20 + 10}s linear infinite alternate`, // Increased duration
+          delay: Math.random() * 3 + "s",
         });
       }
       setDrones(elements);
@@ -26,13 +29,14 @@ const Drone = () => {
       {drones.map((drone) => (
         <img
           key={drone.id}
-          src="/drone.png" // Ensure drone.png is in the `public` folder
+          src="/drone.png"
           alt="Flying Drone"
           className="drone"
           style={{
             left: drone.left,
             top: drone.top,
-            animationDuration: drone.animationDuration,
+            animation: drone.animation,
+            animationDelay: drone.delay,
           }}
         />
       ))}
