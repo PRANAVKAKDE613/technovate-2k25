@@ -1,0 +1,48 @@
+.drone-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    pointer-events: none; /* Prevent drones from blocking clicks */
+    overflow: hidden;
+    z-index: 9999; /* ✅ Ensures drones appear on top of all elements */
+}
+
+.drone {
+    position: absolute;
+    width: 100px;
+    animation: flyDrone 8s linear infinite alternate;
+    z-index: 9999; /* ✅ Ensures individual drones appear on top */
+}
+
+.drone:nth-child(2) {
+    width: 120px;
+    animation: flyDrone2 10s linear infinite alternate;
+}
+
+.drone:nth-child(3) {
+    width: 110px;
+    animation: flyDrone3 12s linear infinite alternate;
+}
+
+/* Animation for Drone 1 */
+@keyframes flyDrone {
+    0% { transform: translate(10vw, 5vh) rotate(0deg); }
+    50% { transform: translate(80vw, 50vh) rotate(15deg); }
+    100% { transform: translate(10vw, 90vh) rotate(0deg); }
+}
+
+/* Animation for Drone 2 */
+@keyframes flyDrone2 {
+    0% { transform: translate(80vw, 10vh) rotate(0deg); }
+    50% { transform: translate(20vw, 70vh) rotate(-15deg); }
+    100% { transform: translate(90vw, 30vh) rotate(0deg); }
+}
+
+/* Animation for Drone 3 */
+@keyframes flyDrone3 {
+    0% { transform: translate(30vw, 20vh) rotate(0deg); }
+    50% { transform: translate(60vw, 80vh) rotate(10deg); }
+    100% { transform: translate(20vw, 40vh) rotate(-10deg); }
+}

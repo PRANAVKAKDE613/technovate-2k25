@@ -1,0 +1,85 @@
+.EventLCard {
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    background: rgba(255,255,255,0.1);
+    border-top: 1px solid rgba(255,255,255,0.5);
+    border-left: 1px solid rgba(255,255,255,0.5);
+    border-radius: 20px;
+    width: 25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.image {
+    margin: 20px 20px 0px 20px;
+    overflow: hidden;
+}
+
+.image img {
+    
+    border-radius: 12px;
+    transform: scale(1);
+    transition: transform .2s ease-in-out;
+}
+
+.EventLCard.EventLCardH .image img {
+    transform: scale(1.15);
+    border-radius: 12px;
+}
+
+.eventHead {
+    font-size: 3.4rem;
+    font-family: "Bebas Neue", sans-serif;
+    color: aliceblue;
+    text-wrap: nowrap;
+}
+
+.content-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 20px 0px 20px;
+    position: relative;
+}
+
+.content-btn .content-p {
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    margin-bottom: 50px;
+    height: 3rem;
+}
+
+.btn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #01FDFE;
+}
+
+@media only screen and (max-width: 1024px) {
+    .EventLCard {
+        width: 21rem;
+    }
+
+    .eventHead {
+        font-size: 3rem;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .EventLCard {
+        width: 18rem;
+    }
+    .content-btn .content-p {
+        margin-bottom: 70px;
+    }
+    .eventHead {
+        font-size: 2.4rem;
+        
+    }
+}
+
+

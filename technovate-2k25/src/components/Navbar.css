@@ -1,0 +1,65 @@
+Header {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate3d(-50%, 0, 0);
+    width: fit-content;
+    height: 2.8rem;
+    padding: 20px 1px;
+    margin-top: 30px;
+    color: white;
+    text-align: center;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: 9999;
+    transition: all 300ms ease-in-out;
+    font-weight: 400;
+}
+
+.links {
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px;
+    color: rgb(211, 208, 208);
+}
+
+.links:hover {
+    color: white;
+    text-shadow: 0px 0px 15px #ffffff;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    transition: color .8s ease, text-shadow .2s ease;
+}
+
+.links.active {
+    color: white;
+    background-color: rgba(150, 160, 182, 0.5);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    height: 2.5rem;
+    width: fit-content;
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    margin: 1px;
+}
+
+@media only screen and (max-width: 540px) {
+    Header {
+        font-size: 14px;
+    }
+
+    .links {
+        padding: 0 10px;
+    }
+}

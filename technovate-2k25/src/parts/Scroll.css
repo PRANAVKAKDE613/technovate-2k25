@@ -1,0 +1,17 @@
+/* Custom scrollbar styling */
+.scroll-container::-webkit-scrollbar {
+    /* height: 8px; */
+    display: none;
+  }
+  .scroll-container::-webkit-scrollbar-thumb {
+    background: #6d64f7;
+    border-radius: 10px;
+  }
+  .scroll-container::-webkit-scrollbar-track {
+    background: #ddd;
+  }
+
+  .scroll-container{
+    -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
